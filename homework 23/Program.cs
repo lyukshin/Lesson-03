@@ -6,20 +6,12 @@
 // 5 -> 1, 8, 27, 64, 125
 
 
-// Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
-// 4 -> 24 
-// 5 -> 120
 
-int Sum(int number)
-{
-    int sum = 1;
-    for(int i = 1; i <= number; i++)
-    {
-        sum*=i; // == sum = sum + i
-    }
-    return sum;
-}
+ System.Console.Write("Введите число: ");
+ int number = Convert.ToInt32(Console.ReadLine());
+ System.Console.WriteLine($"Таблица кубов от 1 до {number}");
 
-System.Console.Write("Введите число: ");
-int A = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine($"Произведение чисел от 1 до A = {Sum(A)}");
+ for (int i = 1; i <= number; i++)// i = i + 2
+ {
+     System.Console.Write($"{Math.Pow(i, 3)} ");
+ }
